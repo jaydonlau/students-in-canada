@@ -7,8 +7,8 @@ import {
 } from "react-router-dom";
 import { Normalize } from 'styled-normalize';
 
-import HomePage from 'HomePage';
-import LoginPage from 'LoginPage';
+import HomePage from 'containers/HomePage';
+import LoginPage from 'containers/LoginPage';
 
 const App: React.FC = () => {
   return (

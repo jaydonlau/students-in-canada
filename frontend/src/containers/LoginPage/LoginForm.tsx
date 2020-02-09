@@ -1,6 +1,14 @@
-import React from 'react';
-import { Form, Field, ErrorMessage, FormikProps, withFormik } from "formik";
-import * as yup from 'yup';
+import React from 'react'
+import { FormikProps, withFormik } from 'formik'
+import * as yup from 'yup'
+
+import {
+	StyledForm,
+	StyledField,
+	StyledErrorMessage,
+	EmailWrapper,
+	PasswordWrapper
+} from './LoginPage.styles'
 
 import { FormValues, OtherProps, LoginFormProps } from './types.d'
 
@@ -8,13 +16,19 @@ const LoginForm = (props: OtherProps & FormikProps<FormValues>) => {
 	const { showPassword, errors } = props
 	console.log('errors=', errors)
 	return (
-		<Form>
-			<Field type="text" name="email" placeholder="email" />
-			<ErrorMessage name="email" />
-			<Field type={showPassword ? 'text' : 'password'} name="password" placeholder="password" />
-			<ErrorMessage name="password" />
+		<StyledForm>
+			<EmailWrapper>
+				<label htmlFor="email">Email</label>
+				<StyledField type="text" name="email"/>
+				<StyledErrorMessage name="email" />
+			</EmailWrapper>
+			<PasswordWrapper>
+				<label htmlFor="password">Password</label>
+				<StyledField type={showPassword ? 'text' : 'password'} name="password"/>
+				<StyledErrorMessage name="password" />
+			</PasswordWrapper>
 			<button type="submit">Submit</button>
-		</Form>
+		</StyledForm>
 	)
 }
 

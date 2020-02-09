@@ -5,7 +5,8 @@ import * as yup from 'yup';
 import { FormValues, OtherProps, LoginFormProps } from './types.d'
 
 const LoginForm = (props: OtherProps & FormikProps<FormValues>) => {
-	const { showPassword } = props
+	const { showPassword, errors } = props
+	console.log('errors=', errors)
 	return (
 		<Form>
 			<Field type="text" name="email" placeholder="email" />
@@ -42,5 +43,7 @@ export default withFormik<LoginFormProps, FormValues>({
 	    // Simulates the delay of a real request
 	    setTimeout(() => setSubmitting(false), 3 * 1000)
 	},
+	validateOnChange: false,
+	validateOnBlur: false,
   validationSchema: LoginValidation,
 })(LoginForm)

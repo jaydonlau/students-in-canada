@@ -5,7 +5,9 @@ import {
   Route,
   Link
 } from "react-router-dom";
+
 import { Normalize } from 'styled-normalize';
+import GlobalStyles from './styles/global';
 
 import HomePage from 'containers/HomePage';
 import LoginPage from 'containers/LoginPage';
@@ -31,6 +33,7 @@ const App: React.FC = () => {
           <HomePage />
         </Route>
       </Switch>
+      <GlobalStyles />
     </Router>
   );
 }

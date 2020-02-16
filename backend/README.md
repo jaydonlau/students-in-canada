@@ -1,6 +1,11 @@
 ## SIC Backend
 The backend for SIC is a Django 3.0.3 project
 
+## Directory structure
+- `sic_project` -> django project root, contains website settings
+- `apps` -> contains our website specific apps
+
+
 ## Building for local development
 - make sure you're in students-in-canada/backend
 - `python3 -m virtualenv venv` to create your environment

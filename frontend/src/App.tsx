@@ -7,7 +7,7 @@ import {
 } from "react-router-dom";
 
 import { Normalize } from 'styled-normalize';
-import GlobalStyles from './styles/global.js';
+import GlobalStyles from './styles/global';
 
 import HomePage from 'containers/HomePage';
 import LoginPage from 'containers/LoginPage';

@@ -19,3 +19,7 @@ The backend for SIC is a Django 3.0.3 project
 - (first time usage) `python manage.py migrate`
 - `python manage.py runserver`
 - hit `localhost:8000` :)
+
+## Local dev documentation
+- checking your local DB: https://inloop.github.io/sqlite-viewer/
+- upload `sic_project/db.sqlite3` file

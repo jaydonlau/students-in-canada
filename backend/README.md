@@ -19,4 +19,3 @@ The backend for SIC is a Django 3.0.3 project
 - (first time usage) `python manage.py migrate`
 - `python manage.py runserver`
 - hit `localhost:8000` :) :)
-
